@@ -11,18 +11,24 @@
 
 
 /*** Funktion mit Array als Parameter */
-// mögliche Tests:
-// output(getSentence(["Ich","bin","Max"],"S"));
-// output(getSentence(["Bist","du","Max"],"Q"));
-// output(getSentence(["Ich","bin"],"E"));
-// output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,","habbe","Sie","die"],"Q"));
 
 
-// Modul: Punktuation | Test
-output(getPunktuation("S"));
-output(getPunktuation("Q"));
-output(getPunktuation("E"));
-output(getPunktuation("ö"));
+//Modul: Array als Parameter
+output(getSentence(["Ich","bin","Max"],"S"));
+output(getSentence(["Bist","du","Max"],"Q"));
+output(getSentence(["Ich","bin"],"E"));
+output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,","habbe","Sie","die"],"Q"));
+function getSentence(arr, op) {
+
+    return getSentenceArr (arr) + getPunktuation (op);
+}
+
+
+//Modul: Punktuation | Test
+// output(getPunktuation("S"));
+// output(getPunktuation("Q"));
+// output(getPunktuation("E"));
+// output(getPunktuation("ö"));
 function getPunktuation(op) {
    
   switch (op) {
